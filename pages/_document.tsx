@@ -1,7 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-import { GTM_ID } from 'lib'
-
 
 export default class MyDocument extends Document {
   render() {
@@ -16,7 +14,7 @@ export default class MyDocument extends Document {
           <noscript>
             <iframe
               height='0'
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              src={`https://www.googletagmanager.com/ns.html?id=GTM-MBMKKSS`}
               style={{ display: 'none', visibility: 'hidden' }}
               width='0'
             />
