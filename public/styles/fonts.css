@@ -1,0 +1,150 @@
+/* 1. Импортируем оптимизированные гарнитуры шрифтов */
+@font-face {
+  font-family: 'montserrat_medium';
+  src: url('../fonts/montserrat-semibold.woff2') format('woff2'),
+       url('../fonts/montserrat-semibold.woff') format('woff');
+  font-weight: 500;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'montserrat_regular';
+  src: url('../fonts/montserrat-regular.woff2') format('woff2'),
+       url('../fonts/montserrat-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* 2. Применяем гарнитуры шрифтов к селекторам */
+a {
+  text-decoration: none;
+  font-family: 'montserrat_regular';
+}
+
+body {
+  font-family: 'montserrat_regular', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'montserrat_medium', sans-serif;
+}
+
+
+/* 3. Определяем переменные с размерами, межстрочными интервалами и отступами шрифтов */
+:root {
+  --smallest_font_size: 14px;
+  --smallest_line_height: 20px;
+
+  --smaller_font_size: 16px;
+  --smaller_line_height: 24px;
+
+  --regular_font_size: 18px;
+  --regular_line_height: 28px;
+
+  --subtitle_font_size: 22px;
+  --subtitle_line_height: 28px;
+
+  --h2_font_size: 30px;
+  --h2_h6_line_height: 36px;
+
+  --h1_font_size: 44px;
+  --h1_line_height: 56px;
+
+  --padding_between_paragraphs: 20px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --smallest_font_size: 12px;
+    --smallest_line_height: 16px;
+  
+    --smaller_font_size: 16px;
+    --smaller_line_height: 24px;
+  
+    --regular_font_size: 16px;
+    --regular_line_height: 24px;
+  
+    --subtitle_font_size: 19px;
+    --subtitle_line_height: 24px;
+  
+    --h2_font_size: 22px;
+    --h2_h6_line_height: 28px;
+  
+    --h1_font_size: 29px;
+    --h1_line_height: 36px;
+
+    --padding_between_paragraphs: 16px;
+  }
+}
+
+
+/* 4. Создаём классы лишь с размерами шрифтов */
+.smallest_font_size { font-size: var(--smallest_font_size); }
+.smaller_font_size { font-size: var(--smaller_font_size); }
+.regular_font_size { font-size: var(--regular_font_size); }
+
+.subtitle_font_size {
+  font-family: 'montserrat_medium', sans-serif;
+  font-size: var(--subtitle_font_size);
+}
+
+.h2_font_size { font-size: var(--h2_font_size); }
+.h1_font_size { font-size: var(--h1_font_size); }
+
+
+/* 5. Создаём классы с переменными из п. № 3 */
+.smallest_font_style {
+  font-size: var(--smallest_font_size);
+  line-height: var(--smallest_line_height);
+}
+.smallest_font_style:not(:last-child) { padding-bottom: var(--padding_between_paragraphs) }
+
+.smaller_font_style {
+  font-size: var(--smaller_font_size);
+  line-height: var(--smaller_line_height);
+}
+.smaller_font_style:not(:last-child) { padding-bottom: var(--padding_between_paragraphs); }
+
+.regular_font_style {
+  font-size: var(--regular_font_size);
+  line-height: var(--regular_line_height);
+}
+.regular_font_style:not(:last-child) { padding-bottom: var(--padding_between_paragraphs); }
+
+.subtitle_font_style {
+  font-family: 'montserrat_medium', sans-serif;
+  font-size: var(--subtitle_font_size);
+  line-height: var(--subtitle_line_height);
+  padding-bottom: var(--padding_between_paragraphs);
+}
+.subtitle_font_style:not(:last-child) { padding-bottom: var(--padding_between_paragraphs); }
+
+.h2_font_style {
+  font-size: var(--h2_font_size);
+  line-height: var(--h2_h6_line_height);
+  padding-bottom: var(--padding_between_paragraphs);
+}
+
+.h1_font_style {
+  font-size: var(--h1_font_size);
+  line-height: var(--h1_line_height);
+  padding-bottom: var(--padding_between_paragraphs);
+}
+
+
+/* 6. Определяем переменные с цветами шрифтов */
+:root {
+  --primary_color_dark_bg: #fff;
+  --secondary_color_dark_bg: rgba(255, 255, 255, .6);
+  --primary_color_light_bg: #242629;
+  --secondary_color_light_bg: #737476;
+  --link_border_color: #2426291f;
+}
+
+
+/* 7. Создаём классы с цветами шрифтов из п. № 5 */
+.primary_light_bg { color: var(--primary_color_light_bg); }
+.secondary_light_bg { color: var(--secondary_color_light_bg); }
+.primary_dark_bg { color: var(--primary_color_dark_bg); }
+.secondary_dark_bg { color: var(--secondary_color_dark_bg); }

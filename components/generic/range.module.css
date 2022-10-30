@@ -1,0 +1,54 @@
+.wrap {
+  display: flex;
+  gap: var(--controller-gap);
+}
+
+.container {
+  display: inline-block;
+  height: 72px;
+  padding: 0;
+  width: 24px;
+}
+
+.input {
+  appearance: none;
+  cursor: pointer;
+  height: 24px;
+  margin: 0;
+  transform: rotate(-90deg);
+  transform-origin: 36px 36px;
+  width: 72px;
+}
+
+.input::-moz-range-track {
+  background: #000;
+  height: 2px;
+}
+
+.input::-webkit-slider-runnable-track {
+  background: #000;
+  height: 2px;
+}
+
+.input::-moz-range-thumb {
+  background-color: #000;
+  border: none;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+
+.input::-webkit-slider-thumb {
+  background-color: #000;
+  border-radius: 50%;
+  margin-top: -7px;
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+}
+
+.datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

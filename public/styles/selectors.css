@@ -1,0 +1,14 @@
+button, input, select {
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+}
