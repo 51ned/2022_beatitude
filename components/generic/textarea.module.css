@@ -1,0 +1,28 @@
+.input {
+  outline: none;
+  resize: none;
+  display: block;
+  width: 100%;
+}
+
+.input,
+.input::placeholder {
+  color: #000;
+  font-size: var(--regular_font_size);
+  line-height: var(--regular_line_height);
+}
+
+.inner {
+  background-color: var(--green-pale);
+  border: none;
+  border-radius: 24px;
+  height: 256px;
+  padding: 24px;
+}
+
+.outer {
+  border: 8px solid var(--green);
+  background-color: var(--green-pale);
+  border-radius: 36px;
+  padding: 36px;
+}

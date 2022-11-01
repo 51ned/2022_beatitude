@@ -2,8 +2,8 @@ import style from './switch.module.css'
 
 
 interface SwitchProps {
-  id: string;
-  labelTextFirst: string;
+  id: string,
+  labelTextFirst: string,
   labelTextSecond: string
 }
 

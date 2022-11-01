@@ -2,7 +2,7 @@ import style from './checkbox.module.css'
 
 
 interface CheckboxProps {
-  id: string;
+  id: string,
   labelText: string
 }
 

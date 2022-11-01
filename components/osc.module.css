@@ -1,0 +1,15 @@
+.head {
+  align-items: center;
+  background-color: var(--green);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 32px;
+}
+
+.textarea {
+  background-color: var(--green);
+  border-left: 8px solid var(--green);
+  border-right: 8px solid var(--green);
+}

@@ -14,8 +14,6 @@
     "noImplicitAny": true,
     "paths": {
       "@/components/*": ["components/*"],
-      "@/layouts/*": ["layouts/*"],
-      "@/lib/*": ["lib/*"],
       "@/public/*": ["public/*"]
     },
     "resolveJsonModule": true,

@@ -2,3 +2,18 @@
   --controller-gap: 20px;
   --controller-line: 2px;
 }
+
+:root {
+  --blue: hsl(190, 51%, 73%);
+  --blue-pale: hsl(190, 51%, 73%);
+
+  --dark: hsl(213, 11%, 20%);
+
+  --red: hsl(1, 69%, 57%);
+
+  --green: hsl(104, 46%, 63%);
+  --green-pale: hsl(104, 46%, 83%);
+
+  --yellow: hsl(63, 75%, 69%);
+  --yellow-pale: hsl(63, 75%, 69%);
+}

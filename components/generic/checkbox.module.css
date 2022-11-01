@@ -5,11 +5,12 @@
 }
 
 .input {
+  background-color: transparent !important;
   border: var(--controller-line) solid #000;
   border-radius: 50%;
+  color: #000;
   cursor: pointer;
   display: grid;
-  color: #000;
   height: 24px;
   place-content: center;
   width: 24px;
