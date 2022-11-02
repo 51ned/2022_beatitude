@@ -1,5 +1,6 @@
 interface TextProps {
   bg?: string,
+  bold?: boolean,
   children: React.ReactNode,
   color?: string,
   size?: string,
@@ -10,6 +11,7 @@ interface TextProps {
 
 export const Text: React.FC<TextProps> = ({
   bg = 'light', // or dark
+  bold,
   children,
   color = 'primary', // or secondary
   size, // or smallest / smaller / regular / subtitle
@@ -20,8 +22,14 @@ export const Text: React.FC<TextProps> = ({
   const Color = `${color}_${bg}_bg`
   const Style = size ? `${size}_font_size` : `${style}_font_style`
 
+  let Weight
+
+  if (bold) {
+    Weight = 'bold'
+  }
+
   return (
-    <Tag className={`${Color} ${Style}`}>
+    <Tag className={`${Color} ${Style} ${Weight}`}>
       { children }
     </Tag>
   )  

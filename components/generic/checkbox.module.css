@@ -4,6 +4,10 @@
   gap: var(--controller-gap);
 }
 
+.reversed {
+  flex-direction: row-reverse;
+}
+
 .input {
   background-color: transparent !important;
   border: var(--controller-line) solid #000;

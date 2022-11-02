@@ -3,8 +3,13 @@
   gap: var(--controller-gap);
 }
 
+.reversed {
+  flex-direction: row-reverse;
+}
+
 .input {
   appearance: none;
+  background-color: transparent !important;
   border: var(--controller-line) solid #000;
   border-radius: 12px;
   cursor: pointer;

@@ -9,7 +9,7 @@ interface SynthProps {}
 export function Synth(pr: SynthProps) {
   return (
     <form>
-      <fieldset className={style.oscs}>
+      <fieldset className={style.osc_wrap}>
         <Osc/>
         <Osc/>
         <Osc/>

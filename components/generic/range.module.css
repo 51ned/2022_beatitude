@@ -12,6 +12,7 @@
 
 .input {
   appearance: none;
+  background-color: transparent !important;
   cursor: pointer;
   height: 24px;
   margin: 0;

@@ -1,0 +1,20 @@
+.background_yellow {
+  background-color: var(--yellow);
+}
+
+.background_green {
+  background-color: var(--green);
+}
+
+.background_blue {
+  background-color: var(--blue);
+}
+
+.bordered {
+  border: var(--card-border);
+}
+
+.wrap {
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+}

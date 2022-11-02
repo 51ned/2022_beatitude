@@ -152,3 +152,7 @@ p {
 .secondary_light_bg { color: var(--secondary_color_light_bg); }
 .primary_dark_bg { color: var(--primary_color_dark_bg); }
 .secondary_dark_bg { color: var(--secondary_color_dark_bg); }
+
+
+/* 8. Прочие классы, связанные со шрифтами */
+.bold { font-family: 'montserrat_medium', sans-serif; }

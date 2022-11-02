@@ -1,4 +1,7 @@
 :root {
+  --card-border: 8px solid #fff;
+  --card-radius: 32px;
+  --card-padding: 24px 8px;
   --controller-gap: 20px;
   --controller-line: 2px;
 }

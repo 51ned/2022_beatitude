@@ -3,7 +3,7 @@ import { Arc, Knob, Pointer, Value } from 'rc-knob'
 import style from './knob.module.css'
 
 
-export function CustomKnob() {
+export default function CustomKnob() {
   return (
     <Knob 
       angleOffset={220} 
@@ -14,7 +14,7 @@ export function CustomKnob() {
       value={50}
     >
       <Arc 
-        arcWidth={2}
+        arcWidth={1.5}
         color='#000'
         radius={24}
       />
