@@ -5,7 +5,7 @@
 
 .container {
   display: inline-block;
-  height: 72px;
+  height: 80px;
   padding: 0;
   width: 24px;
 }
@@ -17,8 +17,8 @@
   height: 24px;
   margin: 0;
   transform: rotate(-90deg);
-  transform-origin: 36px 36px;
-  width: 72px;
+  transform-origin: 40px 40px;
+  width: 80px;
 }
 
 .input::-moz-range-track {
@@ -48,8 +48,13 @@
   -webkit-appearance: none;
 }
 
-.datalist {
+.opt_list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.opt {
+  min-height: 0;
+  padding: 0
 }

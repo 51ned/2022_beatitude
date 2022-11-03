@@ -7,12 +7,37 @@ interface SynthProps {}
 
 
 export function Synth(pr: SynthProps) {
+  const oscData = [
+    {
+      mode: 'Solo mode',
+      num: 1,
+      bg: 'yellow'
+    },
+    {
+      mode: 'Dual mode',
+      num: 2,
+      bg: 'blue'
+    },
+    {
+      mode: '',
+      num: 3,
+      bg: 'green'
+    }
+  ]
+
   return (
     <form>
       <fieldset className={style.osc_wrap}>
-        <Osc/>
-        <Osc/>
-        <Osc/>
+        {oscData.map((item, index) => {
+          return (
+            <Osc
+              key={index}
+              oscMode={item.mode}
+              oscNumber={item.num}
+              panelBackground={item.bg}
+            />
+          )
+        })}
       </fieldset>
     </form>
   )

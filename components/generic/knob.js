@@ -10,25 +10,25 @@ export default function CustomKnob() {
       angleRange={280}
       max={100}
       min={1}
-      size={52}
+      size={72}
       value={50}
     >
       <Arc 
         arcWidth={1.5}
         color='#000'
-        radius={24}
+        radius={32}
       />
 
       <Pointer 
         color='#000'
-        radius={18}
+        radius={26}
         type='circle'
         width={4}
       />
 
       <Value 
         className={style.value}
-        marginBottom={20}
+        marginBottom={30}
       />
     </Knob>
   )

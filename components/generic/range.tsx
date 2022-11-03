@@ -21,24 +21,25 @@ export function Range(pr: RangeProps) {
           max='3'
           min='1'
           step='1'
+          defaultValue={3}
         />
       </div>
 
-      <datalist className={style.datalist} id='options'>
+      <datalist className={style.opt_list} id='options'>
         <option
-          className={style.option}
+          className={style.opt}
           label={pr.optTextFirst}
           value='1'
         />
 
         <option
-          className={style.option}
+          className={style.opt}
           label={pr.optTextSecond}
           value='2'
         />
 
         <option
-          className={style.option}
+          className={style.opt}
           label={pr.optTextThird}
           value='3'
         />

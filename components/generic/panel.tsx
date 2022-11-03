@@ -1,14 +1,14 @@
-import style from './card.module.css'
+import style from './panel.module.css'
 
 
-interface CardProps {
+interface PanelProps {
   withBackground?: string,
   children: React.ReactNode,
   isBordered?: boolean
 }
 
 
-export const Card: React.FC<CardProps> = ({
+export const Panel: React.FC<PanelProps> = ({
   withBackground = 'transparent', // or yellow / blue / green
   children,
   isBordered

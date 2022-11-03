@@ -13,7 +13,7 @@
   border: var(--controller-line) solid #000;
   border-radius: 12px;
   cursor: pointer;
-  height: 40px;
+  height: 48px;
   display: inline-block;
   margin: 0;
   outline: none;
@@ -37,7 +37,7 @@
 }
 
 .input:checked::after {
-  transform: translateY(100%);
+  transform: translateY(calc(100% + 8px));
   transition: all 60ms;
 }
 
