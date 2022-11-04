@@ -1,3 +1,4 @@
+import { Mixer } from './mixer'
 import { Osc } from './osc'
 
 import style from './synth.module.css'
@@ -26,7 +27,7 @@ export function Synth(pr: SynthProps) {
   ]
 
   return (
-    <form>
+    <form className={style.synth}>
       <fieldset className={style.osc_wrap}>
         {oscData.map((item, index) => {
           return (
@@ -38,6 +39,12 @@ export function Synth(pr: SynthProps) {
             />
           )
         })}
+      </fieldset>
+
+      <fieldset className={style.mixer_wrap}>
+        <div>
+          <Mixer />
+        </div>
       </fieldset>
     </form>
   )

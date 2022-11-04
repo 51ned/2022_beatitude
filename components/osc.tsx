@@ -60,7 +60,9 @@ export const Osc: React.FC<OscProps> = ({
           labelTextSecond='Fixed'
         />
 
-        <Knob />
+        <div>
+          <Knob />
+        </div>
 
         <Switch
           id={`osc-${oscNumber}-switch-2`}
@@ -74,13 +76,13 @@ export const Osc: React.FC<OscProps> = ({
         <Range 
           id={`osc-${oscNumber}-range`}
           optTextFirst='Dots'
-          optTextSecond='Other punctuation marks'
+          optTextSecond='Punctuation marks'
           optTextThird='Functional words'
         />
       </div>
 
       <Button isStripped>
-        <span>Clear</span>
+        Clear
       </Button>
     </Panel>
   )

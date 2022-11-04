@@ -2,19 +2,31 @@ import style from './range.module.css'
 
 
 interface RangeProps {
-  id: string
-  optTextFirst: string
-  optTextSecond: string
+  id: string,
+  onDarkBg?: boolean,
+  optTextFirst: string,
+  optTextSecond: string,
   optTextThird: string
 }
 
 
 export function Range(pr: RangeProps) {
+  let bg
+  let color
+
+  if (pr.onDarkBg) {
+    bg = `${style.input_light}`
+    color = `${style.opt_light}`
+  } else {
+    bg = `${style.input_dark}`
+    color = ''
+  }
+ 
   return (
     <div className={style.wrap}>
       <div className={style.container}>
         <input
-          className={style.input}
+          className={bg}
           id={pr.id}
           list='options'
           type='range'
@@ -27,19 +39,19 @@ export function Range(pr: RangeProps) {
 
       <datalist className={style.opt_list} id='options'>
         <option
-          className={style.opt}
+          className={`${style.opt} ${color}`}
           label={pr.optTextFirst}
           value='1'
         />
 
         <option
-          className={style.opt}
+          className={`${style.opt} ${color}`}
           label={pr.optTextSecond}
           value='2'
         />
 
         <option
-          className={style.opt}
+          className={`${style.opt} ${color}`}
           label={pr.optTextThird}
           value='3'
         />

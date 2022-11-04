@@ -15,12 +15,12 @@ export default function CustomKnob() {
     >
       <Arc 
         arcWidth={1.5}
-        color='#000'
+        color='#fff'
         radius={32}
       />
 
       <Pointer 
-        color='#000'
+        color='#fff'
         height={8}
         radius={24}
         type='rect'
@@ -28,7 +28,7 @@ export default function CustomKnob() {
       />
 
       <Value 
-        className={style.value}
+        className={style.value_light}
         marginBottom={30}
       />
     </Knob>

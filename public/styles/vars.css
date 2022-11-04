@@ -1,5 +1,5 @@
 :root {
-  --card-border: 8px solid #fff;
+  --card-border: 1.5px solid #fff;
   --card-radius: 32px;
   --card-padding: 24px 8px;
   --controller-gap: 20px;
@@ -13,6 +13,7 @@
   --dark: hsl(213, 11%, 20%);
 
   --muted-dark: rgba(0, 0, 0, .2);
+  --muted-light: rgba(255, 255, 255, .2);
 
   --green: hsl(104, 46%, 63%);
   --green-pale: hsl(104, 46%, 83%);

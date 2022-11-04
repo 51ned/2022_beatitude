@@ -26,7 +26,7 @@ export const Panel: React.FC<PanelProps> = ({
     background = ''
   }
 
-  const border = isBordered ? `${style.bordered}` : ''
+  let border = isBordered ? `${style.bordered}` : ''
 
   return (
     <section className={`${style.wrap} ${background} ${border}`}>

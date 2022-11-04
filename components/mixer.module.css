@@ -1,0 +1,46 @@
+.head {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 24px 24px;
+}
+
+.head::after {
+  background-color: var(--muted-light);
+  bottom: 0;
+  content: '';
+  height: 1px;
+  position: absolute;
+  width: calc(100% - 48px);
+}
+
+.body {
+  align-items: center;
+  display: flex;
+  gap: 24px;
+  padding: 32px 24px 24px;
+}
+
+.order_section {
+  display: flex;
+  gap: 20px;
+}
+
+.length_section {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.switchs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.divider {
+  background-color: var(--muted-light);
+  height: 100%;
+  width: 1px;
+}
