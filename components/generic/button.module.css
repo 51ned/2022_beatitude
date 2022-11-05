@@ -6,6 +6,17 @@
   width: 100%;
 }
 
-.stripped {
-  border: 2px solid #000;
-}
+.bg_blue,
+.bg_green,
+.bg_red,
+.bg_yellow { color: #fff; }
+
+.bg_blue { background-color: var(--blue); }
+
+.bg_green { background-color: var(--green); }
+
+.bg_red { background-color: var(--red); }
+
+.bg_yellow { background-color: var(--yellow); }
+
+.bordered { border: 2px solid #000; }

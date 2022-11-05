@@ -1,25 +1,8 @@
-.head {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  padding: 0 24px 24px;
-}
-
-.head::after {
-  background-color: var(--muted-light);
-  bottom: 0;
-  content: '';
-  height: 1px;
-  position: absolute;
-  width: calc(100% - 48px);
-}
-
 .body {
   align-items: center;
   display: flex;
   gap: 24px;
-  padding: 32px 24px 24px;
+  padding: 32px 24px 8px;
 }
 
 .order_section {
@@ -41,6 +24,6 @@
 
 .divider {
   background-color: var(--muted-light);
-  height: 100%;
+  height: 116px;
   width: 1px;
 }

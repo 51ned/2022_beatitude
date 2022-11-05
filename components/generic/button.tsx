@@ -2,24 +2,39 @@ import style from './button.module.css'
 
 
 interface ButtonProps {
-  children: React.ReactNode,
-  isStripped: boolean
+  text: string,
+  withBg?: string,
+  withBorder?: boolean
 }
 
 
 export function Button(pr: ButtonProps) {
-  let decoration
+  let bg
 
-  if (pr.isStripped) {
-    decoration = `${style.stripped}`
+  if (pr.withBg === 'blue') {
+    bg = `${style.bg_blue}`
+  } else if (pr.withBg === 'green') {
+    bg = `${style.bg_red}`
+  } else if (pr.withBg === 'red') {
+    bg = `${style.bg_red}`
+  } else if (pr.withBg === 'yellow') {
+    bg = `${style.bg_yellow}`
+  } else {
+    bg = ''
+  }
+
+  let bordered
+
+  if (pr.withBorder) {
+    bordered = `${style.bordered}`
   }
 
   return (
     <button
-      className={`${style.button} ${decoration}`}
+      className={`${style.button} ${bg} ${bordered}`}
       role='button'
     >
-      { pr.children }
+      { pr.text }
     </button>
   )
 }

@@ -1,0 +1,12 @@
+.wrap {
+  border-radius: var(--panel-radius);
+  padding: var(--panel-padding);
+}
+
+.bg_blue { background-color: var(--blue); }
+
+.bg_green { background-color: var(--green); }
+
+.bg_yellow { background-color: var(--yellow); }
+
+.bordered { border: var(--panel-border); }

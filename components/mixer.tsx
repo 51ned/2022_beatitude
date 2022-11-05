@@ -1,33 +1,20 @@
-import { Panel, Range, Switch, Text } from './generic'
-import Knob from './generic/knob-light'
+import { Body, Head, Footer, Panel } from '@/components/generic/panel'
+import { Range, Switch } from '@/components/generic'
+
+import Knob from '@/components/generic/knob-light'
 
 import style from './mixer.module.css'
 
 
-interface MixerProps {}
-
-
-export const Mixer: React.FC<MixerProps> = ({
-
-}) => {
-
+export function Mixer() {
   return (
-    <Panel
-      withBackground='transparent'
-      isBordered
-    >
-      
-      <div className={style.head}>
-        <Text
-          bg='dark'
-          bold
-          style='smaller'
-          tag='span'
-        >
-          MIXER
-        </Text>
-      </div>
-      
+    <Panel withBorder>
+      <Head
+        headBg='dark'
+        headTitle='MIXER'
+        withDivider
+      />
+
       <div className={style.body}>
         <div className={style.order_section}>
           <Range 

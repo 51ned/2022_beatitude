@@ -1,5 +1,6 @@
 import { Mixer } from './mixer'
 import { Osc } from './osc'
+import { Output } from './output'
 
 import style from './synth.module.css'
 
@@ -34,8 +35,8 @@ export function Synth(pr: SynthProps) {
             <Osc
               key={index}
               oscMode={item.mode}
-              oscNumber={item.num}
-              panelBackground={item.bg}
+              oscNum={item.num}
+              panelBg={item.bg}
             />
           )
         })}
@@ -45,6 +46,8 @@ export function Synth(pr: SynthProps) {
         <div>
           <Mixer />
         </div>
+
+        <Output />
       </fieldset>
     </form>
   )

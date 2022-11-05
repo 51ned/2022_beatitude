@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  padding: 0 24px 24px;
+}
+
+.justyfied { justify-content: space-between; }
+
+.centered { justify-content: center; }
+
+.divided { position: relative; }
+
+.divided::after {
+  background-color: var(--muted-light);
+  bottom: 0;
+  content: '';
+  height: 1px;
+  position: absolute;
+  width: calc(100% - 48px);
+}

@@ -1,89 +1,93 @@
-import { Button, Checkbox, Panel, Range, Switch, Textarea, Text } from './generic'
-import Knob from './generic/knob'
+import { Body, Head, Footer, Panel } from '@/components/generic/panel'
+import { Button, Checkbox, Range, Switch, Textarea } from '@/components/generic'
+
+import Knob from '@/components/generic/knob'
 
 import style from './osc.module.css'
 
 
 interface OscProps {
   oscMode?: string,
-  oscNumber: number,
-  panelBackground: string
+  oscNum: number,
+  panelBg: string
 }
 
 
-export const Osc: React.FC<OscProps> = ({
-  oscMode,
-  oscNumber,
-  panelBackground
-}) => {
+export function Osc(pr: OscProps) {
+  function getFooterData() {
+    if (pr.oscNum === 1) {
+      return (
+        <>
+          <Button text='Submit' withBg='red' />
+          <Button text='Clear' withBorder />
+        </>
+      )
+    }
 
-  let oscHeadStyle
-
-  if (oscMode) {
-    oscHeadStyle = `${style.head_spaced}`
-  } else {
-    oscHeadStyle = `${style.head_centered}`
+    return (
+      <Button text='Clear' withBorder />
+    )
   }
 
   return (
-    <Panel withBackground={panelBackground}>
-      <div className={`${style.head} ${oscHeadStyle}`}>
-        <Text bold style='smaller' tag='span'>
-          OSC # {oscNumber}
-        </Text>
-
-        {oscMode &&
+    <Panel withBg={pr.panelBg}>
+      <Head headBg='light' headTitle={`OSC # ${pr.oscNum}`}>
+        {pr.oscMode &&
           <Checkbox
-            id={`osc-${oscNumber}-mode`}
-            labelText={oscMode}
+            id={`osc-${pr.oscNum}-mode`}
+            labelText={pr.oscMode}
             isReversed
           />
         }
-      </div>
+      </Head>
 
-      <Textarea
-        background={panelBackground}
-        placeholderText='Paste your text here...'
-      />
-
-      <div className={style.mode_section}>
-        <Checkbox
-          id={`osc-${oscNumber}-bypass`}
-          labelText='Bypass'
-        />
-      </div>
-
-      <div className={style.length_section}>
-        <Switch
-          id={`osc-${oscNumber}-switch-1`}
-          labelTextFirst='Floating'
-          labelTextSecond='Fixed'
+      <Body>
+        <Textarea
+          background={pr.panelBg}
+          placeholderText='Paste your text here'
         />
 
-        <div>
-          <Knob />
+        <div className={style.mode_section}>
+          <Checkbox
+            id={`osc-${pr.oscNum}-bypass`}
+            labelText='Bypass'
+          />
         </div>
 
-        <Switch
-          id={`osc-${oscNumber}-switch-2`}
-          labelTextFirst='Symbols'
-          labelTextSecond='Sentences'
-          isReversed
-        />
-      </div>
+        <div className={style.length_section}>
+          <Switch
+            id={`osc-${pr.oscNum}-switch-1`}
+            labelTextFirst='Floating'
+            labelTextSecond='Fixed'
+          />
 
-      <div className={style.trigger_section}>
-        <Range 
-          id={`osc-${oscNumber}-range`}
-          optTextFirst='Dots'
-          optTextSecond='Punctuation marks'
-          optTextThird='Functional words'
-        />
-      </div>
+          <Knob />
 
-      <Button isStripped>
-        Clear
-      </Button>
+          <Switch
+            id={`osc-${pr.oscNum}-switch-2`}
+            labelTextFirst='Symbols'
+            labelTextSecond='Sentences'
+            isReversed
+          />
+        </div>
+
+        <div className={style.trigger_section}>
+          <Range 
+            id={`osc-${pr.oscNum}-range`}
+            optTextFirst='Dots'
+            optTextSecond='Punctuation marks'
+            optTextThird='Functional words'
+          />
+        </div>
+      </Body>
+      
+      <Footer>
+        { getFooterData() }
+      </Footer>
     </Panel>
   )
 }
+
+  
+
+  
