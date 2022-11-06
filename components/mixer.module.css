@@ -1,8 +1,5 @@
-.body {
+.aligned {
   align-items: center;
-  display: flex;
-  gap: 24px;
-  padding: 32px 24px 8px;
 }
 
 .order_section {

@@ -20,3 +20,8 @@
 .bg_yellow { background-color: var(--yellow); }
 
 .bordered { border: 2px solid #000; }
+
+.light {
+  border: 2px solid #fff;
+  color: #fff;
+}

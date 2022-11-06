@@ -1,4 +1,4 @@
-import { Head, Panel } from '@/components/generic/panel'
+import { Body, Head, Panel } from '@/components/generic/panel'
 import { Button } from '@/components/generic'
 
 import style from './output.module.css'
@@ -13,11 +13,11 @@ export function Output() {
         withDivider
       />
 
-      <div className={style.container}>
+      <Body isColumn>
         <Button text='Submit' withBg='red' />
-        <Button text='Copy' withBorder />
-        <Button text='Clear' withBorder />
-      </div>
+        <Button text='Copy' withBorder onDarkBg />
+        <Button text='Clear' withBorder onDarkBg />
+      </Body>
     </Panel>
   )
 }

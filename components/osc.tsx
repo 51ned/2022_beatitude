@@ -1,7 +1,5 @@
 import { Body, Head, Footer, Panel } from '@/components/generic/panel'
-import { Button, Checkbox, Range, Switch, Textarea } from '@/components/generic'
-
-import Knob from '@/components/generic/knob'
+import { Button, Checkbox, Number, Range, Switch, Textarea } from '@/components/generic'
 
 import style from './osc.module.css'
 
@@ -18,7 +16,7 @@ export function Osc(pr: OscProps) {
     if (pr.oscNum === 1) {
       return (
         <>
-          <Button text='Submit' withBg='red' />
+          <Button text='Submit' withBorder />
           <Button text='Clear' withBorder />
         </>
       )
@@ -41,12 +39,12 @@ export function Osc(pr: OscProps) {
         }
       </Head>
 
-      <Body>
-        <Textarea
-          background={pr.panelBg}
-          placeholderText='Paste your text here'
-        />
+      <Textarea
+        background={pr.panelBg}
+        placeholderText='Paste your text here'
+      />
 
+      <Body isColumn>
         <div className={style.mode_section}>
           <Checkbox
             id={`osc-${pr.oscNum}-bypass`}
@@ -61,7 +59,7 @@ export function Osc(pr: OscProps) {
             labelTextSecond='Fixed'
           />
 
-          <Knob />
+          {/* <Number steps={1} /> */}
 
           <Switch
             id={`osc-${pr.oscNum}-switch-2`}
@@ -87,7 +85,4 @@ export function Osc(pr: OscProps) {
     </Panel>
   )
 }
-
-  
-
   

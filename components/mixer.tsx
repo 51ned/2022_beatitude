@@ -1,7 +1,5 @@
-import { Body, Head, Footer, Panel } from '@/components/generic/panel'
-import { Range, Switch } from '@/components/generic'
-
-import Knob from '@/components/generic/knob-light'
+import { Body, Head, Panel } from '@/components/generic/panel'
+import { Number, Range, Switch } from '@/components/generic'
 
 import style from './mixer.module.css'
 
@@ -15,7 +13,7 @@ export function Mixer() {
         withDivider
       />
 
-      <div className={style.body}>
+      <Body isExtraStyled={style.aligned}>
         <div className={style.order_section}>
           <Range 
             id='order-range-1'
@@ -53,7 +51,7 @@ export function Mixer() {
             />
           </div>
 
-          <Knob />
+          {/* <Number steps={1} /> */}
         </div>
 
         <div className={style.divider} />
@@ -65,7 +63,7 @@ export function Mixer() {
           optTextSecond='Punctuation marks'
           optTextThird='Functional words'
         />
-      </div>
+      </Body>
     </Panel>
   )
 }

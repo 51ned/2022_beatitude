@@ -14,6 +14,7 @@
     "noImplicitAny": true,
     "paths": {
       "@/components/*": ["components/*"],
+      "@/hooks/*": ["hooks/*"],
       "@/public/*": ["public/*"]
     },
     "resolveJsonModule": true,

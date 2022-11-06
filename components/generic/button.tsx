@@ -2,6 +2,7 @@ import style from './button.module.css'
 
 
 interface ButtonProps {
+  onDarkBg?: boolean,
   text: string,
   withBg?: string,
   withBorder?: boolean
@@ -23,15 +24,12 @@ export function Button(pr: ButtonProps) {
     bg = ''
   }
 
-  let bordered
-
-  if (pr.withBorder) {
-    bordered = `${style.bordered}`
-  }
+  const bordered = pr.withBorder ? `${style.bordered}` : ''
+  const color = pr.onDarkBg ? `${style.light}` : ''
 
   return (
     <button
-      className={`${style.button} ${bg} ${bordered}`}
+      className={`${style.button} ${bg} ${bordered} ${color}`}
       role='button'
     >
       { pr.text }
