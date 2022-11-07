@@ -12,21 +12,6 @@ interface OscProps {
 
 
 export function Osc(pr: OscProps) {
-  function getFooterData() {
-    if (pr.oscNum === 1) {
-      return (
-        <>
-          <Button text='Submit' withBorder />
-          <Button text='Clear' withBorder />
-        </>
-      )
-    }
-
-    return (
-      <Button text='Clear' withBorder />
-    )
-  }
-
   return (
     <Panel withBg={pr.panelBg}>
       <Head headBg='light' headTitle={`OSC # ${pr.oscNum}`}>
@@ -40,7 +25,7 @@ export function Osc(pr: OscProps) {
       </Head>
 
       <Textarea
-        background={pr.panelBg}
+        withBg={pr.panelBg}
         placeholderText='Paste your text here'
       />
 
@@ -55,16 +40,16 @@ export function Osc(pr: OscProps) {
         <div className={style.length_section}>
           <Switch
             id={`osc-${pr.oscNum}-switch-1`}
-            labelTextFirst='Floating'
-            labelTextSecond='Fixed'
+            labelTextFirst='Fixed'
+            labelTextSecond='Floating'
           />
 
-          {/* <Number steps={1} /> */}
-
+          {/* <Number withBg={pr.panelBg} /> */}
+          
           <Switch
             id={`osc-${pr.oscNum}-switch-2`}
-            labelTextFirst='Symbols'
-            labelTextSecond='Sentences'
+            labelTextFirst='Sentence'
+            labelTextSecond='Symbol'
             isReversed
           />
         </div>
@@ -80,7 +65,7 @@ export function Osc(pr: OscProps) {
       </Body>
       
       <Footer>
-        { getFooterData() }
+        <Button text='Clear' withBorder />
       </Footer>
     </Panel>
   )

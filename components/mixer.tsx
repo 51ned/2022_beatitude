@@ -38,15 +38,15 @@ export function Mixer() {
           <div className={style.switchs}>
             <Switch
               id='length-switch-1'
-              labelTextFirst='Floating'
-              labelTextSecond='Fixed'
+              labelTextFirst='Fixed'
+              labelTextSecond='Floating'
               onDarkBg
             />
 
             <Switch
               id='length-switch-2'
-              labelTextFirst='Symbols'
-              labelTextSecond='Sentences'
+              labelTextFirst='Sentence'
+              labelTextSecond='Symbol'
               onDarkBg
             />
           </div>

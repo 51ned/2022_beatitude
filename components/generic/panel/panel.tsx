@@ -17,7 +17,9 @@ export function Panel(pr: PanelProps) {
     bg = `${style.bg_blue}`
   } else if (pr.withBg === 'green') {
     bg = `${style.bg_green}`
-  } else {
+  } else if (pr.withBg === 'purple') {
+    bg = `${style.bg_purple}`
+  }  else {
     bg = ''
   }
 

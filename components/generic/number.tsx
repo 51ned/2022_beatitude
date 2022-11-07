@@ -1,90 +1,40 @@
-import { ChangeEvent, useEffect, useState } from 'react'
-
-import { useInterval } from '@/hooks/use-interval'
-
 import style from './number.module.css'
 
 
 interface NumberProps {
-  onChange?: (value: number) => void,
-  steps: number
+  withBg: string
 }
 
 
-export function Number({ steps, onChange }: NumberProps = { steps: 1 }) {
-  const [value, setValue] = useState<number>(0)
-  const [mouseDownDirection, setMouseDownDirection] = useState<'up' | 'down' | undefined>(undefined)
-  const max = (num: number) => (num < 0 ? 4 : 3)
+export function Number(pr: NumberProps) {
+  let button_bg
+  let textarea_bg
 
-  const handleButtonChange = (direction?: 'up' | 'down') => {
-    setValue(curr => {
-      let next: number
-
-      switch (direction) {
-        case 'up':
-          next = curr + (steps || 1)
-          break
-        case 'down':
-          next = curr - (steps || 1)
-          break
-        default:
-          next = curr
-          break
-      }
-
-      return `${next}`.length <= max(curr) ? next : curr
-    })
+  if (pr.withBg === 'yellow') {
+    button_bg = `${style.button_bg_yellow}`
+    textarea_bg = `${style.textarea_bg_yellow}`
+  } else if (pr.withBg === 'blue') {
+    button_bg = `${style.button_bg_blue}`
+    textarea_bg = `${style.textarea_bg_blue}`
+  } else {
+    button_bg = `${style.button_bg_green}`
+    textarea_bg = `${style.textarea_bg_green}`
   }
-
-  useInterval(() => handleButtonChange(mouseDownDirection), mouseDownDirection ? 100 : null)
-
-  const handleChange = ({ currentTarget: { value } }: ChangeEvent<HTMLInputElement>) => {
-    setValue(curr => {
-      if (!Boolean(value)) { return 0 }
-
-      const numeric = parseInt(value, 10)
-      const maxLength = max(numeric)
-
-      if (value.length > maxLength) {
-        return curr
-      }
-
-      return (value.length <= maxLength ? numeric : curr)
-    })
-  }
-
-  useEffect(() => {
-    onChange && onChange(value);
-  }, [value])
 
   return (
     <div className={style.container}>
-      <button
-        className={style.button}
-        onClick={() => handleButtonChange('down')}
-        onMouseDown={() => setMouseDownDirection('down')}
-        onMouseOut={() => setMouseDownDirection(undefined)}
-        onMouseUp={() => setMouseDownDirection(undefined)}
-      >
-        -
+      <button className={`${button_bg} ${style.button} `}>
+        <svg height='16px' width='16px' viewBox='0 0 16 16'>
+          <polygon points='7,0 9,0 9,7 16,7 16,9 9,9 9,16 7,16 7,9 0,9 0,7 7,7' />
+        </svg>
       </button>
 
-      <input
-        className={style.input}
-        onChange={handleChange}
-        step={steps}
-        type='number'
-        value={value}
-      />
+      <input className={`${style.input} ${textarea_bg}`} type='number' />
 
-      <button
-        className={style.button}
-        onClick={() => handleButtonChange('up')}
-        onMouseDown={() => setMouseDownDirection('up')}
-        onMouseUp={() => setMouseDownDirection(undefined)}
-        onMouseOut={() => setMouseDownDirection(undefined)}
-      >
-        +
+      <button className={`${style.button} ${button_bg}`}>
+        <svg height='16px' width='16px' viewBox='0 0 16 16'>
+          <rect width='16' height='2' />
+        </svg>
       </button>
     </div>
   )

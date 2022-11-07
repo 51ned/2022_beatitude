@@ -1,14 +1,10 @@
-.background_yellow {
-  background-color: var(--yellow-pale);
-}
+.bg_blue { background-color: var(--blue-pale); }
 
-.background_green {
-  background-color: var(--green-pale);
-}
+.bg_green { background-color: var(--green-pale); }
 
-.background_blue {
-  background-color: var(--blue-pale);
-}
+.bg_purple { background-color: var(--purple-pale); }
+
+.bg_yellow { background-color: var(--yellow-pale); }
 
 .input {
   box-sizing: border-box;
@@ -30,9 +26,4 @@
   border-radius: 24px;
   height: 144px;
   padding: 24px;
-}
-
-.outer {
-  border-radius: 36px;
-  padding: 36px;
 }

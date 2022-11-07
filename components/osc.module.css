@@ -20,4 +20,10 @@
   justify-content: space-between;
 }
 
+.number_section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .trigger_section { padding-bottom: 24px; }

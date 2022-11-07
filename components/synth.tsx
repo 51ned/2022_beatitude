@@ -1,6 +1,7 @@
 import { Mixer } from './mixer'
 import { Osc } from './osc'
 import { Output } from './output'
+import { Result } from './result'
 
 import style from './synth.module.css'
 
@@ -43,8 +44,9 @@ export function Synth(pr: SynthProps) {
       </fieldset>
 
       <fieldset className={style.mixer_wrap}>
-        <div>
+        <div className={style.mixer_container}>
           <Mixer />
+          <Result />
         </div>
 
         <Output />
