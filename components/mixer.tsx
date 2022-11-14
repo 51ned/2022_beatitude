@@ -39,14 +39,14 @@ export function Mixer() {
             <Switch
               id='length-switch-1'
               labelTextFirst='Fixed'
-              labelTextSecond='Floating'
+              labelTextSecond='Float'
               onDarkBg
             />
 
             <Switch
               id='length-switch-2'
-              labelTextFirst='Sentence'
-              labelTextSecond='Symbol'
+              labelTextFirst='Sent.'
+              labelTextSecond='Symb.'
               onDarkBg
             />
           </div>

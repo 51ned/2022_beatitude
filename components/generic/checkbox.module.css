@@ -1,4 +1,4 @@
-.wrap {
+.container {
   align-items: center;
   display: flex;
   gap: var(--controller-gap);

@@ -1,16 +1,17 @@
+import React, { ChangeEventHandler } from 'react'
+
 import style from './textarea.module.css'
 
 
 interface TextareaProps {
-  withBg?: string,
+  isAble: boolean,
+  getValue: ChangeEventHandler<HTMLTextAreaElement>,
   placeholderText: string,
-  isOuter?: boolean
+  withBg?: string
 }
 
 
 export function Textarea(pr: TextareaProps) {
-  const border = pr.isOuter ? `${style.outer}` : `${style.inner}`
-
   let bg
 
   if (pr.withBg === 'yellow') {
@@ -27,7 +28,9 @@ export function Textarea(pr: TextareaProps) {
 
   return (
     <textarea
-      className={`${style.input} ${border} ${bg}`}
+      className={`${style.input} ${bg}`}
+      disabled={pr.isAble}
+      onChange={pr.getValue}
       placeholder={pr.placeholderText}
     />
   )

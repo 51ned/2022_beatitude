@@ -1,5 +1,8 @@
+import { useState } from 'react'
+
 import { Body, Head, Footer, Panel } from '@/components/generic/panel'
-import { Button, Checkbox, Number, Range, Switch, Textarea } from '@/components/generic'
+import { Button, Checkbox, Range, Switch, Textarea } from '@/components/generic'
+import { Knob } from './knob'
 
 import style from './osc.module.css'
 
@@ -12,6 +15,8 @@ interface OscProps {
 
 
 export function Osc(pr: OscProps) {
+  const [value, setValue] = useState(.25) // temp!
+
   return (
     <Panel withBg={pr.panelBg}>
       <Head headBg='light' headTitle={`OSC # ${pr.oscNum}`}>
@@ -41,15 +46,15 @@ export function Osc(pr: OscProps) {
           <Switch
             id={`osc-${pr.oscNum}-switch-1`}
             labelTextFirst='Fixed'
-            labelTextSecond='Floating'
+            labelTextSecond='Float'
           />
 
-          {/* <Number withBg={pr.panelBg} /> */}
+          <Knob value={value} onChange={setValue} />
           
           <Switch
             id={`osc-${pr.oscNum}-switch-2`}
-            labelTextFirst='Sentence'
-            labelTextSecond='Symbol'
+            labelTextFirst='Sent.'
+            labelTextSecond='Symb.'
             isReversed
           />
         </div>
