@@ -4,12 +4,9 @@ import style from './checkbox.module.css'
 
 
 interface CheckboxProps {
-  actualValue: string,
-  checkSelection: boolean,
   isReversed?: boolean,
   id: string,
-  labelText: string,
-  updateValue: ChangeEventHandler<HTMLInputElement>
+  labelText: string
 }
 
 
@@ -20,11 +17,8 @@ export function Checkbox(pr: CheckboxProps) {
     <div className={`${style.container} ${dir}`}>
       <input
         className={style.input}
-        defaultChecked={pr.checkSelection}
         id={pr.id}
-        onChange={pr.updateValue}
         type='checkbox'
-        value={pr.actualValue}
       />
 
       <label className={style.label} htmlFor={pr.id}>

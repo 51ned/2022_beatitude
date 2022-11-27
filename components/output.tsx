@@ -1,4 +1,4 @@
-import { Body, Head, Panel } from '@/components/generic/panel'
+import { Body, Faceplate, Head } from '@/components/generic/faceplate'
 import { Button } from '@/components/generic'
 
 import style from './output.module.css'
@@ -6,7 +6,7 @@ import style from './output.module.css'
 
 export function Output() {
   return (
-    <Panel withBorder>
+    <Faceplate withBorder>
       <Head
         headBg='dark'
         headTitle='OUTPUT'
@@ -14,10 +14,10 @@ export function Output() {
       />
 
       <Body isColumn>
-        <Button text='Submit' withBg='red' />
-        <Button text='Copy' withBorder onDarkBg />
-        <Button text='Clear' withBorder onDarkBg />
+        <Button text='Repeat' withBg='green' />
+        <Button text='Copy' withBg='blue' />
+        <Button text='Clear' withBg='yellow' />
       </Body>
-    </Panel>
+    </Faceplate>
   )
 }

@@ -1,4 +1,4 @@
-import { Synth } from '@/components/synth'
+import { Synth } from '@/components/synth/synth'
 import { Main } from '@/components/generic'
 
 

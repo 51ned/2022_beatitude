@@ -1,18 +1,26 @@
-.mode_section,
+.mode_section {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
 .length_section {
-  padding-bottom: 24px;
+  padding: 24px 0;
   position: relative;
 }
 
-.mode_section::after,
-.length_section::after {
-  background-color: var(--muted-dark);
-  bottom: 0;
+.length_section::after,
+.length_section::before {
+  background-color: var(--muted_dark);
   content: '';
   height: 1px;
   position: absolute;
   width: 100%;
 }
+
+.length_section::after { bottom: 0; }
+.length_section::before { top: 0; }
 
 .length_section {
   align-items: center;
@@ -26,4 +34,4 @@
   gap: 20px;
 }
 
-.trigger_section { padding-bottom: 24px; }
+.trigger_section { padding-bottom: 32px; }

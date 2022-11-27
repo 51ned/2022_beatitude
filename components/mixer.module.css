@@ -1,5 +1,7 @@
 .aligned {
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .order_section {
@@ -20,7 +22,7 @@
 }
 
 .divider {
-  background-color: var(--muted-light);
+  background-color: var(--muted_light);
   height: 116px;
   width: 1px;
 }

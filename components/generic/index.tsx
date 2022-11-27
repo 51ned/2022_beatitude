@@ -1,5 +1,6 @@
 export * from './button'
 export * from './checkbox'
+export * from './counter'
 export * from './number'
 export * from './main'
 export * from './range'

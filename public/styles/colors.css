@@ -1,0 +1,34 @@
+:root {
+  --blue: hsl(190, 51%, 73%);
+  --blue_pale: hsl(190, 51%, 87%);
+
+  --dark: hsl(213, 11%, 20%);
+
+  --muted_dark: rgba(0, 0, 0, .2);
+  --muted_light: rgba(255, 255, 255, .2);
+
+  --green: hsl(104, 46%, 63%);
+  --green_pale: hsl(104, 46%, 83%);
+
+  --purple: hsl(281, 46%, 71%);
+  --purple_pale: hsl(281, 46%, 91%);
+
+  --red: hsl(1, 69%, 57%);
+
+  --yellow: hsl(63, 75%, 69%);
+  --yellow_pale: hsl(63, 75%, 89%);
+}
+
+.blue_bg { background-color: var(--blue); }
+.blue_pale_bg { background-color: var(--blue_pale); }
+
+.green_bg { background-color: var(--green); }
+.green_pale_bg { background-color: var(--green_pale); }
+
+.purple_bg { background-color: var(--purple); }
+.purple_pale_bg { background-color: var(--purple_pale); }
+
+.transparent_bg { background-color: transparent; }
+
+.yellow_bg { background-color: var(--yellow); }
+.yellow_pale_bg { background-color: var(--yellow_pale); }

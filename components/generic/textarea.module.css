@@ -1,26 +1,42 @@
-.bg_blue { background-color: var(--blue-pale); }
-
-.bg_green { background-color: var(--green-pale); }
-
-.bg_purple { background-color: var(--purple-pale); }
-
-.bg_yellow { background-color: var(--yellow-pale); }
+.textarea {
+  border-radius: 24px;
+  padding: 24px 24px 8px 24px;
+}
 
 .input {
   border: none;
-  border-radius: 24px;
   box-sizing: border-box;
-  height: 144px;
-  outline: none;
-  padding: 24px;
-  resize: none;
   display: block;
+  outline: none;
+  resize: none;
   width: 100%;
 }
 
 .input,
 .input::placeholder {
   color: #000;
-  font-size: var(--regular_font_size);
-  line-height: var(--regular_line_height);
+  font-size: var(--smaller_font_size);
+  line-height: var(--smaller_line_height);
 }
+
+.in_osc {
+  height: 24px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+
+.in_result {
+  height: 144px;
+  overflow-x: auto;
+}
+
+.controlls {
+  align-items: center;
+  display: flex;
+}
+
+.button,
+.counter { width: 50%; }
+
+.counter { text-align: right; }

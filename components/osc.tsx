@@ -1,8 +1,5 @@
-import { useState } from 'react'
-
-import { Body, Head, Footer, Panel } from '@/components/generic/panel'
+import { Body, Faceplate, Head, Footer } from '@/components/generic/faceplate'
 import { Button, Checkbox, Range, Switch, Textarea } from '@/components/generic'
-import { Knob } from './knob'
 
 import style from './osc.module.css'
 
@@ -15,10 +12,8 @@ interface OscProps {
 
 
 export function Osc(pr: OscProps) {
-  const [value, setValue] = useState(.25) // temp!
-
   return (
-    <Panel withBg={pr.panelBg}>
+    <Faceplate withBg={pr.panelBg}>
       <Head headBg='light' headTitle={`OSC # ${pr.oscNum}`}>
         {pr.oscMode &&
           <Checkbox
@@ -30,15 +25,22 @@ export function Osc(pr: OscProps) {
       </Head>
 
       <Textarea
-        withBg={pr.panelBg}
+        isInOsc
         placeholderText='Paste your text here'
+        withBg={pr.panelBg}
       />
-
+      
       <Body isColumn>
         <div className={style.mode_section}>
           <Checkbox
             id={`osc-${pr.oscNum}-bypass`}
             labelText='Bypass'
+          />
+
+          <Checkbox
+            id={`osc-${pr.oscNum}-bypass`}
+            isReversed
+            labelText='Cthulhu'
           />
         </div>
 
@@ -46,10 +48,8 @@ export function Osc(pr: OscProps) {
           <Switch
             id={`osc-${pr.oscNum}-switch-1`}
             labelTextFirst='Fixed'
-            labelTextSecond='Float'
+            labelTextSecond='Float.'
           />
-
-          <Knob value={value} onChange={setValue} />
           
           <Switch
             id={`osc-${pr.oscNum}-switch-2`}
@@ -70,9 +70,9 @@ export function Osc(pr: OscProps) {
       </Body>
       
       <Footer>
-        <Button text='Clear' withBorder />
+        <Button text='Clear' withBg='transparent' withBorder />
       </Footer>
-    </Panel>
+    </Faceplate>
   )
 }
   

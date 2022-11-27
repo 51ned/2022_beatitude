@@ -1,7 +1,7 @@
-import { Mixer } from './mixer'
-import { Osc } from './osc'
-import { Output } from './output'
-import { Result } from './result'
+import { Mixer } from '../mixer'
+import { Osc } from '../osc'
+import { Output } from '../output'
+import { Result } from '../result'
 
 import style from './synth.module.css'
 

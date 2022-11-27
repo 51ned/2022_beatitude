@@ -1,37 +1,37 @@
-import React, { ChangeEventHandler } from 'react'
+import { Button, Counter } from '@/components/generic'
 
 import style from './textarea.module.css'
 
 
 interface TextareaProps {
-  isAble: boolean,
-  getValue: ChangeEventHandler<HTMLTextAreaElement>,
+  isInOsc?: boolean,
   placeholderText: string,
   withBg?: string
 }
 
 
 export function Textarea(pr: TextareaProps) {
-  let bg
-
-  if (pr.withBg === 'yellow') {
-    bg = `${style.bg_yellow}`
-  } else if (pr.withBg === 'blue') {
-    bg = `${style.bg_blue}`
-  } else if (pr.withBg === 'green') {
-    bg = `${style.bg_green}`
-  } else if (pr.withBg === 'purple') {
-    bg = `${style.bg_purple}`
-  }  else {
-    bg = ''
-  }
+  const bg = pr.withBg ? `${pr.withBg}_pale_bg` : ''
+  const radius = pr.isInOsc ? `${style.in_osc}` : `${style.in_result}`
 
   return (
-    <textarea
-      className={`${style.input} ${bg}`}
-      disabled={pr.isAble}
-      onChange={pr.getValue}
-      placeholder={pr.placeholderText}
-    />
+    <div className={`${style.textarea} ${`${pr.withBg}_pale_bg`}`}>
+      <textarea
+        className={`${style.input} ${bg} ${radius}`}
+        placeholder={pr.placeholderText}
+      />
+      
+      {pr.isInOsc && 
+        <div className={`${style.controlls} ${`${pr.withBg}_pale_bg`}`}>
+          <div className={style.button}>
+            <Button text='Submit' withBg={pr.withBg} />
+          </div>
+
+          <div className={style.counter}>
+            <Counter textSize='smaller' />
+          </div>
+        </div>
+      }
+    </div>
   )
 }

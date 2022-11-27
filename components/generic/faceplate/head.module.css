@@ -10,7 +10,7 @@
 .divided { position: relative; }
 
 .divided::after {
-  background-color: var(--muted-light);
+  background-color: var(--muted_light);
   bottom: 0;
   content: '';
   height: 1px;

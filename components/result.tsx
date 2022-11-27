@@ -1,16 +1,16 @@
-import { Body, Head, Panel } from '@/components/generic/panel'
+import { Body, Faceplate, Head } from '@/components/generic/faceplate'
 import { Textarea } from '@/components/generic'
 
 
 export function Result() {
   return (
-    <Panel withBg='purple'>
+    <Faceplate withBg='purple'>
       <Head headBg='light' headTitle='RESULT' />
 
       <Textarea
         withBg='purple'
         placeholderText='Result comes here'
       />
-    </Panel>
+    </Faceplate>
   )
 }

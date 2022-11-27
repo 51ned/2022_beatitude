@@ -1,23 +1,10 @@
 .button {
-  background-color: transparent;
+
   border-radius: 24px;
   font-size: var(--smaller-font-size);
   height: 48px;
   width: 100%;
 }
-
-.bg_blue,
-.bg_green,
-.bg_red,
-.bg_yellow { color: #fff; }
-
-.bg_blue { background-color: var(--blue); }
-
-.bg_green { background-color: var(--green); }
-
-.bg_red { background-color: var(--red); }
-
-.bg_yellow { background-color: var(--yellow); }
 
 .bordered { border: 2px solid #000; }
 
