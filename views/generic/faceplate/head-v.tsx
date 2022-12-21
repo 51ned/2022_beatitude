@@ -1,4 +1,4 @@
-import { Text } from '@/components/generic'
+import { Text } from '@/views/generic'
 
 import style from './head.module.css'
 

@@ -1,4 +1,4 @@
-import { Button, Counter } from '@/components/generic'
+import { Button, Counter } from '@/views/generic'
 
 import style from './textarea.module.css'
 

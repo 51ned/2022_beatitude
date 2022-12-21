@@ -1,4 +1,4 @@
-import { Text } from '@/components/generic/text'
+import { Text } from '@/views/generic/text-v'
 
 
 interface CounterProps {

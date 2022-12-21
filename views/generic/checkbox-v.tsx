@@ -1,4 +1,6 @@
-import React, { ChangeEventHandler } from 'react'
+import { observer } from 'mobx-react-lite'
+
+import { checkboxStore } from '@/stores/checkbox-s'
 
 import style from './checkbox.module.css'
 
@@ -6,18 +8,25 @@ import style from './checkbox.module.css'
 interface CheckboxProps {
   isReversed?: boolean,
   id: string,
-  labelText: string
+  labelText: string,
+  name: string
 }
 
 
-export function Checkbox(pr: CheckboxProps) {
+export const Checkbox = observer(function Checkbox(pr: CheckboxProps) {
   const dir = pr.isReversed ? `${style.reversed}` : ''
+  const {reg, checked, setChecked} = checkboxStore
+
+  reg(pr)
 
   return (
     <div className={`${style.container} ${dir}`}>
       <input
         className={style.input}
+        defaultChecked={checked}
         id={pr.id}
+        name={pr.name}
+        onChange={() => setChecked(pr.name)}
         type='checkbox'
       />
 
@@ -26,4 +35,4 @@ export function Checkbox(pr: CheckboxProps) {
       </label>
     </div>
   )
-}
+})

@@ -1,5 +1,5 @@
-import { Body, Faceplate, Head } from '@/components/generic/faceplate'
-import { Button } from '@/components/generic'
+import { Body, Faceplate, Head } from '@/views/generic/faceplate'
+import { Button } from '@/views/generic'
 
 import style from './output.module.css'
 

@@ -37,7 +37,7 @@ export function Synth(pr: SynthProps) {
               key={index}
               oscMode={item.mode}
               oscNum={item.num}
-              panelBg={item.bg}
+              faceplateBg={item.bg}
             />
           )
         })}

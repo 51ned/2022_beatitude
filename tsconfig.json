@@ -13,9 +13,10 @@
     "noEmit": true,
     "noImplicitAny": true,
     "paths": {
-      "@/components/*": ["components/*"],
+      "@/views/*": ["views/*"],
       "@/hooks/*": ["hooks/*"],
-      "@/public/*": ["public/*"]
+      "@/public/*": ["public/*"],
+      "@/stores/*": ["stores/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

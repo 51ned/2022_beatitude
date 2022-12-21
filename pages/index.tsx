@@ -1,5 +1,5 @@
-import { Synth } from '@/components/synth/synth'
-import { Main } from '@/components/generic'
+import { Synth } from '@/views/synth/synth'
+import { Main } from '@/views/generic'
 
 
 export default function Home() {

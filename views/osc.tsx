@@ -1,5 +1,5 @@
-import { Body, Faceplate, Head, Footer } from '@/components/generic/faceplate'
-import { Button, Checkbox, Range, Switch, Textarea } from '@/components/generic'
+import { Body, Faceplate, Head, Footer } from '@/views/generic/faceplate'
+import { Button, Checkbox, Knob, Range, Switch, Textarea } from '@/views/generic'
 
 import style from './osc.module.css'
 
@@ -7,19 +7,20 @@ import style from './osc.module.css'
 interface OscProps {
   oscMode?: string,
   oscNum: number,
-  panelBg: string
+  faceplateBg: string
 }
 
 
 export function Osc(pr: OscProps) {
   return (
-    <Faceplate withBg={pr.panelBg}>
+    <Faceplate withBg={pr.faceplateBg}>
       <Head headBg='light' headTitle={`OSC # ${pr.oscNum}`}>
         {pr.oscMode &&
           <Checkbox
             id={`osc-${pr.oscNum}-mode`}
-            labelText={pr.oscMode}
             isReversed
+            labelText={pr.oscMode}
+            name={`osc-${pr.oscNum}-mode`}
           />
         }
       </Head>
@@ -27,7 +28,7 @@ export function Osc(pr: OscProps) {
       <Textarea
         isInOsc
         placeholderText='Paste your text here'
-        withBg={pr.panelBg}
+        withBg={pr.faceplateBg}
       />
       
       <Body isColumn>
@@ -35,12 +36,14 @@ export function Osc(pr: OscProps) {
           <Checkbox
             id={`osc-${pr.oscNum}-bypass`}
             labelText='Bypass'
+            name={`osc-${pr.oscNum}-bypass`}
           />
 
           <Checkbox
-            id={`osc-${pr.oscNum}-bypass`}
+            id={`osc-${pr.oscNum}-tzara`}
             isReversed
-            labelText='Cthulhu'
+            labelText='Tzara'
+            name={`osc-${pr.oscNum}-tzara`}
           />
         </div>
 
@@ -50,6 +53,8 @@ export function Osc(pr: OscProps) {
             labelTextFirst='Fixed'
             labelTextSecond='Float.'
           />
+
+          <Knob radius={32} />
           
           <Switch
             id={`osc-${pr.oscNum}-switch-2`}

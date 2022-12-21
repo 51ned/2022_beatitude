@@ -1,0 +1,7 @@
+.container {
+  height: 64px;
+  overflow: visible;
+  outline: none;
+  touch-action: manipulation;
+  width: 64px;
+}

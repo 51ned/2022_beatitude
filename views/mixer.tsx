@@ -1,5 +1,5 @@
-import { Body, Faceplate, Head } from '@/components/generic/faceplate'
-import { Range, Switch } from '@/components/generic'
+import { Body, Faceplate, Head } from '@/views/generic/faceplate'
+import { Range, Switch } from '@/views/generic'
 
 import style from './mixer.module.css'
 

@@ -1,0 +1,6 @@
+.circle {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-width: 1.5px;
+}

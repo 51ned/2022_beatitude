@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
 
-import { pageview } from 'lib'
+import { pageView } from 'lib'
 
 import '../public/styles/global.css'
 
@@ -13,10 +13,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   useEffect(() => {
-    router.events.on('routeChangeComplete', pageview)
+    router.events.on('routeChangeComplete', pageView)
 
     return () => {
-      router.events.off('routeChangeComplete', pageview)
+      router.events.off('routeChangeComplete', pageView)
     }
   }, [router.events])
 
